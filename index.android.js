@@ -7,16 +7,21 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  View,
+  StatusBar
 } from 'react-native';
 import BarraNavegacao from './src/components/BarraNavegacao';
 
 export default class appConsultoria extends Component {
   render() {
     return (
-      <BarraNavegacao />
+      <View>
+        <StatusBar 
+          //hidden
+          backgroundColor='#CCC'
+        />
+        <BarraNavegacao />
+      </View>
     );
   }
 }
