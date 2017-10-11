@@ -26,7 +26,7 @@ export default class appConsultoria extends Component {
           }
 
           if(route.id === 'b') {
-            return(<CenaClientes />);
+            return(<CenaClientes navigator={navigator} />);
           }
         }}
       />
