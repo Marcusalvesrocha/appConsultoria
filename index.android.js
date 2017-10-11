@@ -10,9 +10,10 @@ import {
   View
 } from 'react-native';
 
-import {Navigator} from 'react-native-deprecated-custom-components'
-import CenaClientes from './src/components/CenaClientes';
+import {Navigator} from 'react-native-deprecated-custom-components';
 import CenaPrincipal from './src/components/CenaPrincipal';
+import CenaClientes from './src/components/CenaClientes';
+import CenaContatos from './src/components/CenaContatos';
 
 export default class appConsultoria extends Component {
   render() {
@@ -27,6 +28,10 @@ export default class appConsultoria extends Component {
 
           if(route.id === 'b') {
             return(<CenaClientes navigator={navigator} />);
+          }
+
+          if(route.id === 'c') {
+            return(<CenaContatos navigator={navigator} />);
           }
         }}
       />

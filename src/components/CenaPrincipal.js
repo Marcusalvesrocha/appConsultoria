@@ -14,9 +14,9 @@ export default class CenaPrincipal extends Component {
     	<View>
         <StatusBar 
           //hidden
-          backgroundColor='#CCC'
+          backgroundColor={corBarra}
         />
-        <BarraNavegacao />
+        <BarraNavegacao cor="'#CCC'" />
 
         <View style={styles.logo}>
 	        <Image source={imagens.logo} />
@@ -33,7 +33,13 @@ export default class CenaPrincipal extends Component {
 		        	<Image style={styles.imgMenu} source={imagens.menu_cliente} />
 		        </TouchableHighlight>	
 
-		        <Image style={styles.imgMenu} source={imagens.menu_contato} />
+		        <TouchableHighlight
+		      		onPress={()=>{
+		      			this.props.navigator.push({ id: 'c'});
+		      		}}
+		      	>
+		        	<Image style={styles.imgMenu} source={imagens.menu_contato} />
+		        </TouchableHighlight>	
 	      	</View>
 		      <View style={styles.menuGrupo}>
 		        <Image style={styles.imgMenu} source={imagens.menu_empresa} />
@@ -55,7 +61,7 @@ const imagens = {
 	menu_servico: require('../imgs/menu_servico.png')
 } 
 	
-	
+const corBarra = '#CCC';
 	
 	
 

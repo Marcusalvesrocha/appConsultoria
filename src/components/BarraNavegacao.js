@@ -19,7 +19,7 @@ export default class BarraNavegacao extends Component {
 		      	>
 	    				<Image source={imagens.btnVoltar} />
 	    			</TouchableHighlight>
-	    		<Text style={ styles.titulo }>ATM Consultoria</Text>
+	    		<Text style={ styles.titulo }>ATM Consultoria {this.props.cor}</Text>
 	    	</View>
 	    );
 	  }
