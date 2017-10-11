@@ -8,20 +8,21 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   View,
-  StatusBar
+  Navigator
 } from 'react-native';
-import BarraNavegacao from './src/components/BarraNavegacao';
+
+import CenaClientes from './src/components/CenaClientes';
+import CenaPrincipal from './src/components/CenaPrincipal';
 
 export default class appConsultoria extends Component {
   render() {
     return (
-      <View>
-        <StatusBar 
-          //hidden
-          backgroundColor='#CCC'
-        />
-        <BarraNavegacao />
-      </View>
+      <Navigator
+        initialRoute={}
+        renderScene={(route, navigator) => {
+          
+        }}
+      />
     );
   }
 }
