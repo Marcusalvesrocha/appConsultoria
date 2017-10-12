@@ -14,13 +14,13 @@ export default class CenaServico extends Component {
     	<View>
         <StatusBar 
           //hidden
-          backgroundColor='#4CCFCD'
+          backgroundColor='#19D1C8'
         />
         <BarraNavegacao voltar navigator={this.props.navigator} />
 
         <View style={styles.cabecalho}>
 	        <Image source={imagens.detalhe_servico} />
-	        <Text style={styles.txtTitulo}>Serviços</Text>
+	        <Text style={styles.txtTitulo}>Nossos Serviços</Text>
       	</View>
 
 	      <View style={styles.detalhe_servico}>
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
 	},
 	txtTitulo: {
 		fontSize: 30,
-		color: '#4CCFCD',
+		color: '#19D1C8',
 		marginLeft: 10,
 		marginTop: 35
 	},

@@ -14,7 +14,7 @@ export default class CenaEmpresa extends Component {
     	<View>
         <StatusBar 
           //hidden
-          backgroundColor='#FF7141'
+          backgroundColor='#EC7148'
         />
         <BarraNavegacao voltar navigator={this.props.navigator} />
 
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 	},
 	txtTitulo: {
 		fontSize: 30,
-		color: '#FF7141',
+		color: '#EC7148',
 		marginLeft: 10,
 		marginTop: 35
 	},

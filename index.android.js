@@ -24,24 +24,25 @@ export default class appConsultoria extends Component {
         initialRoute={ { id: 'principal' }}
         renderScene={(route, navigator) => {
           /* definir a cena com base na rota */
-          if(route.id === 'principal') {
-            return(<CenaPrincipal navigator={navigator} />);
-          }
+          switch (route.id){
+            
+            case 'principal':
+              return(<CenaPrincipal navigator={navigator} />);
 
-          if(route.id === 'cliente') {
-            return(<CenaClientes navigator={navigator} />);
-          }
+            case 'cliente':
+              return(<CenaClientes navigator={navigator} />);
 
-          if(route.id === 'contato') {
-            return(<CenaContatos navigator={navigator} />);
-          }
+            case 'contato':
+              return(<CenaContatos navigator={navigator} />);
 
-          if(route.id === 'empresa') {
-            return(<CenaEmpresa navigator={navigator} />);
-          }
+            case 'empresa':
+              return(<CenaEmpresa navigator={navigator} />);
 
-          if(route.id === 'servico') {
-            return(<CenaServico navigator={navigator} />);
+            case 'servico':
+              return(<CenaServico navigator={navigator} />);
+
+            default:
+              return false;
           }
         }}
       />
