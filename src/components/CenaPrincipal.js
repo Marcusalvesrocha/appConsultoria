@@ -14,9 +14,9 @@ export default class CenaPrincipal extends Component {
 	    <View style={styles.cena}>
 	        <StatusBar 
 	          //hidden
-	          backgroundColor={corBarra}
+	          backgroundColor={cor}
 	        />
-	        <BarraNavegacao cor="'#CCC'" />
+	        <BarraNavegacao corBarra={cor} />
 
 	        <View style={styles.logo}>
 		        <Image source={imagens.logo} />
@@ -26,6 +26,8 @@ export default class CenaPrincipal extends Component {
 			      <View style={styles.menuGrupo}>
 
 			      	<TouchableHighlight
+			      		underlayColor={'#B9C941'}
+			      		activeOpacity={0.7}
 			      		onPress={()=>{
 			      			this.props.navigator.push({ id: 'cliente'});
 			      		}}
@@ -34,6 +36,8 @@ export default class CenaPrincipal extends Component {
 			        </TouchableHighlight>	
 
 			        <TouchableHighlight
+			      		underlayColor={'#61BD8C'}
+			      		activeOpacity={0.7}
 			      		onPress={()=>{
 			      			this.props.navigator.push({ id: 'contato'});
 			      		}}
@@ -44,6 +48,8 @@ export default class CenaPrincipal extends Component {
 			      <View style={styles.menuGrupo}>	
 
 			        <TouchableHighlight
+			      		underlayColor={'#EC7148'}
+			      		activeOpacity={0.7}
 			      		onPress={()=>{
 			      			this.props.navigator.push({ id: 'empresa'});
 			      		}}
@@ -52,6 +58,8 @@ export default class CenaPrincipal extends Component {
 			        </TouchableHighlight>	
 
 			        <TouchableHighlight
+			      		underlayColor={'#19D1C8'}
+			      		activeOpacity={0.7}
 			      		onPress={()=>{
 			      			this.props.navigator.push({ id: 'servico'});
 			      		}}
@@ -60,8 +68,6 @@ export default class CenaPrincipal extends Component {
 			        </TouchableHighlight>	
 		      	</View>
 		      </View>
-		      
-		      
 	    </View>
     );
   }
@@ -75,9 +81,7 @@ const imagens = {
 	menu_servico: require('../imgs/menu_servico.png')
 } 
 	
-const corBarra = '#CCC';
-	
-	
+const cor = '#CCC';
 
 const styles = StyleSheet.create({
 	logo: {
