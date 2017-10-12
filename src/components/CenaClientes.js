@@ -11,29 +11,29 @@ import BarraNavegacao from './BarraNavegacao';
 export default class CenaClientes extends Component {
   render() {
     return (
-    	<View>
-        <StatusBar 
-          //hidden
-          backgroundColor='#B9C941'
-        />
-        <BarraNavegacao voltar navigator={this.props.navigator} />
+    	<View style={styles.cena}>
+			<StatusBar 
+				//hidden
+				backgroundColor='#B9C941'
+			/>
+			<BarraNavegacao voltar navigator={this.props.navigator} />
 
-        <View style={styles.cabecalho}>
-	        <Image source={imagens.detalhe_cliente} />
-	        <Text style={styles.txtTitulo}>Nossos Clientes</Text> 
-      	</View>
+			<View style={styles.cabecalho}>
+				<Image source={imagens.detalhe_cliente} />
+				<Text style={styles.txtTitulo}>Nossos Clientes</Text> 
+			</View>
 
-	      <View style={styles.detalhe_cliente}>
-	        <Image source={imagens.cliente1} />
-	        <Text style={styles.txtDetalheCliente}>Lorem ipsum dolorem</Text>
-      	</View>
-	      <View style={styles.detalhe_cliente}>
-	        <Image source={imagens.cliente2} />
-	        <Text style={styles.txtDetalheCliente}>Lorem ipsum dolorem</Text>
-      	</View>
+			<View style={styles.detalhe_cliente}>
+				<Image source={imagens.cliente1} />
+				<Text style={styles.txtDetalheCliente}>Lorem ipsum dolorem</Text>
+			</View>
+			<View style={styles.detalhe_cliente}>
+				<Image source={imagens.cliente2} />
+				<Text style={styles.txtDetalheCliente}>Lorem ipsum dolorem</Text>
+			</View>
 	      
 	      
-      </View>
+     	</View>
     );
   }
 }
@@ -62,5 +62,9 @@ const styles = StyleSheet.create({
 	txtDetalheCliente: {
 		fontSize: 18,
 		marginLeft: 20
-	} 
+	},
+	cena: {
+		flex: 1,
+		backgroundColor: '#FFF'
+	}
 });

@@ -11,7 +11,7 @@ import BarraNavegacao from './BarraNavegacao';
 export default class CenaServico extends Component {
   render() {
     return (
-    	<View>
+    	<View style={styles.cena}>
         <StatusBar 
           //hidden
           backgroundColor='#19D1C8'
@@ -55,5 +55,9 @@ const styles = StyleSheet.create({
 	txtDetalheServico: {
 		fontSize: 18,
 		marginLeft: 15
+	},
+	cena: {
+		flex: 1,
+		backgroundColor: '#FFF'
 	}
 });

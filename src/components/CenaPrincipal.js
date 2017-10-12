@@ -11,58 +11,58 @@ import BarraNavegacao from './BarraNavegacao';
 export default class CenaPrincipal extends Component {
   render() {
     return (
-    	<View>
-        <StatusBar 
-          //hidden
-          backgroundColor={corBarra}
-        />
-        <BarraNavegacao cor="'#CCC'" />
+	    <View style={styles.cena}>
+	        <StatusBar 
+	          //hidden
+	          backgroundColor={corBarra}
+	        />
+	        <BarraNavegacao cor="'#CCC'" />
 
-        <View style={styles.logo}>
-	        <Image source={imagens.logo} />
-	      </View>
+	        <View style={styles.logo}>
+		        <Image source={imagens.logo} />
+		      </View>
 
-	      <View style={styles.menu}>
-		      <View style={styles.menuGrupo}>
+		      <View style={styles.menu}>
+			      <View style={styles.menuGrupo}>
 
-		      	<TouchableHighlight
-		      		onPress={()=>{
-		      			this.props.navigator.push({ id: 'cliente'});
-		      		}}
-		      	>
-		        	<Image style={styles.imgMenu} source={imagens.menu_cliente} />
-		        </TouchableHighlight>	
+			      	<TouchableHighlight
+			      		onPress={()=>{
+			      			this.props.navigator.push({ id: 'cliente'});
+			      		}}
+			      	>
+			        	<Image style={styles.imgMenu} source={imagens.menu_cliente} />
+			        </TouchableHighlight>	
 
-		        <TouchableHighlight
-		      		onPress={()=>{
-		      			this.props.navigator.push({ id: 'contato'});
-		      		}}
-		      	>
-		        	<Image style={styles.imgMenu} source={imagens.menu_contato} />
-		        </TouchableHighlight>	
-	      	</View>
-		      <View style={styles.menuGrupo}>	
+			        <TouchableHighlight
+			      		onPress={()=>{
+			      			this.props.navigator.push({ id: 'contato'});
+			      		}}
+			      	>
+			        	<Image style={styles.imgMenu} source={imagens.menu_contato} />
+			        </TouchableHighlight>	
+		      	</View>
+			      <View style={styles.menuGrupo}>	
 
-		        <TouchableHighlight
-		      		onPress={()=>{
-		      			this.props.navigator.push({ id: 'empresa'});
-		      		}}
-		      	>
-		        	<Image style={styles.imgMenu} source={imagens.menu_empresa} />
-		        </TouchableHighlight>	
+			        <TouchableHighlight
+			      		onPress={()=>{
+			      			this.props.navigator.push({ id: 'empresa'});
+			      		}}
+			      	>
+			        	<Image style={styles.imgMenu} source={imagens.menu_empresa} />
+			        </TouchableHighlight>	
 
-		        <TouchableHighlight
-		      		onPress={()=>{
-		      			this.props.navigator.push({ id: 'servico'});
-		      		}}
-		      	>
-		        	<Image style={styles.imgMenu} source={imagens.menu_servico} />
-		        </TouchableHighlight>	
-	      	</View>
-	      </View>
-	      
-	      
-      </View>
+			        <TouchableHighlight
+			      		onPress={()=>{
+			      			this.props.navigator.push({ id: 'servico'});
+			      		}}
+			      	>
+			        	<Image style={styles.imgMenu} source={imagens.menu_servico} />
+			        </TouchableHighlight>	
+		      	</View>
+		      </View>
+		      
+		      
+	    </View>
     );
   }
 }

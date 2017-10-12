@@ -11,7 +11,7 @@ import BarraNavegacao from './BarraNavegacao';
 export default class CenaEmpresa extends Component {
   render() {
     return (
-    	<View>
+    	<View style={styles.cena}>
         <StatusBar 
           //hidden
           backgroundColor='#EC7148'
@@ -59,5 +59,9 @@ const styles = StyleSheet.create({
 	txtDetalheEmpresa: {
 		fontSize: 18,
 		marginLeft: 15
+	},
+	cena: {
+		flex: 1,
+		backgroundColor: '#FFF'
 	}
 });
