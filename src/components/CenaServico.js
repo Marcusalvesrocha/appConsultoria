@@ -16,7 +16,7 @@ export default class CenaServico extends Component {
           //hidden
           backgroundColor='#19D1C8'
         />
-        <BarraNavegacao voltar navigator={this.props.navigator} />
+        <BarraNavegacao voltar navigator={this.props.navigator} corBarra='#19D1C8'/>
 
         <View style={styles.cabecalho}>
 	        <Image source={imagens.detalhe_servico} />

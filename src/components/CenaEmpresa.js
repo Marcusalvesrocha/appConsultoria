@@ -16,7 +16,7 @@ export default class CenaEmpresa extends Component {
           //hidden
           backgroundColor='#EC7148'
         />
-        <BarraNavegacao voltar navigator={this.props.navigator} />
+        <BarraNavegacao voltar navigator={this.props.navigator} corBarra='#EC7148'/>
 
         <View style={styles.cabecalho}>
 	        <Image source={imagens.detalhe_empresa} />

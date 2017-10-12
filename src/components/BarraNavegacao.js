@@ -8,27 +8,27 @@ import {
 } from 'react-native';
 
 export default class BarraNavegacao extends Component {
-  render() {
-  	if(this.props.voltar) {
-	    return (
-	    	<View style={ styles.barraTitulo }>
-						<TouchableHighlight
-		      		onPress={()=>{
-		      			this.props.navigator.pop();
-		      		}}
-		      	>
-	    				<Image source={imagens.btnVoltar} />
-	    			</TouchableHighlight>
-	    		<Text style={ styles.titulo }>ATM Consultoria {this.props.cor}</Text>
-	    	</View>
-	    );
-	  }
-	  return (
-	    	<View style={ styles.barraTitulo }>
-	    		<Text style={ styles.titulo }>ATM Consultoria</Text>
-	    	</View>
-	    );
-  }
+	render() {
+	  	if(this.props.voltar) {
+			return (
+				<View style={ [styles.barraTitulo, { backgroundColor: this.props.corBarra}] }>
+					<TouchableHighlight
+						onPress={()=>{
+							this.props.navigator.pop();
+						}}
+					>
+						<Image source={imagens.btnVoltar} />
+					</TouchableHighlight>
+					<Text style={ styles.titulo }>ATM Consultoria {this.props.cor}</Text>
+				</View>
+			);
+		}
+		return (
+			<View style={ styles.barraTitulo }>
+				<Text style={ styles.titulo }>ATM Consultoria</Text>
+			</View>
+		);
+	}
 }
 
 const imagens = {

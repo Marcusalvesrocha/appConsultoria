@@ -16,7 +16,7 @@ export default class CenaContatos extends Component {
 	          //hidden
 	          backgroundColor='#61BD8C'
 	        />
-	        <BarraNavegacao voltar navigator={this.props.navigator} />
+	        <BarraNavegacao voltar navigator={this.props.navigator} corBarra='#61BD8C'/>
 
 	        <View style={styles.cabecalho}>
 		        <Image source={imagens.detalhe_contato} />
